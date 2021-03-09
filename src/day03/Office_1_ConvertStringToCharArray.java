@@ -18,7 +18,7 @@ public class Office_1_ConvertStringToCharArray {
 		String input = "John";
 		charArray(input);
 	}
-
+//
 	private static void charArray(String input) {
 		char[] output = new char[input.length()];
 		
