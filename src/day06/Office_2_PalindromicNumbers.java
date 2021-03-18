@@ -11,25 +11,22 @@ public class Office_2_PalindromicNumbers {
          * like 654*671 = 438834
          */
 
-		int count=1;
 		int maxNumber=1;
-		int maxNumber1=1;
-		int maxNumber2=1;
+		int biggestMultiplier1=1;
+		int biggestMultiplier2=1;
 		
 		for(int i=999;i>100;i--) {
 			for(int j=999;j>100;j--) {
 				if(checkPalindrome(i*j)) {
-					count++;
 					if(maxNumber<i*j) {
 						maxNumber=i*j;
-						maxNumber1=i;
-						maxNumber2=j;
+						biggestMultiplier1=i;
+						biggestMultiplier2=j;
 					}
 				}
 			}
 		}
-		System.out.println("Max palindrome number= "+maxNumber1+"*"+maxNumber2+"="+maxNumber);
-		System.out.println("Steps: "+count);
+		System.out.println("Max palindrome number= "+biggestMultiplier1+"*"+biggestMultiplier2+"="+maxNumber);
 	}
 
 	private static boolean checkPalindrome(int x) {
